@@ -15,7 +15,7 @@ const verifyInput = (req, res, next) => {
         return res.status(400).json({ error: 'Kolom quantity harus berupa angka.' });
     }
 
-    // Jika validasi berhasil, lanjut ke middleware berikutnya
+    // Jika validasi berhasil, lanjut ke middleware berikutnyaa
     next();
 };
 
