@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title><%= title %></title>
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <p>Click to go to the <a href="/pupuk">Pupuk Page</a> or <a href="/bibit">Bibit Page</a></p>
+    <h1>Welcome to <%= title %></h1>
+    <nav>
+        <a href="/pupuk">Pupuk</a> | 
+        <a href="/bibit">Bibit</a>
+    </nav>
 </body>
 </html>

@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibit</title>
+    <title><%= title %></title>
 </head>
 <body>
-    <h1>Welcome to the Bibit Page</h1>
-    <p>Here you can explore various types of bibit for your garden.</p>
-    <p>Back to <a href="/">Home</a> or <a href="/pupuk">Pupuk Page</a></p>
+    <h1><%= title %></h1>
+
+    <form action="/bibit" method="POST">
+        <input type="text" name="name" placeholder="Nama Bibit" required><br>
+        <input type="text" name="type" placeholder="Tipe Bibit" required><br>
+        <input type="text" name="category" placeholder="Kategori" required><br>
+        <input type="text" name="quality" placeholder="Kualitas" required><br>
+        <button type="submit">Tambah Bibit</button>
+    </form>
+
+    <h2>Daftar Bibit</h2>
+    <ul>
+        <% bibitList.forEach(bibit => { %>
+            <li>
+                <%= bibit.name %> - <%= bibit.type %> - <%= bibit.category %> - <%= bibit.quality %>
+                <a href="/bibit/delete/<%= bibit.id %>">Hapus</a>
+            </li>
+        <% }) %>
+    </ul>
 </body>
 </html>

@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pupuk</title>
+    <title><%= title %></title>
 </head>
 <body>
-    <h1>Welcome to the Pupuk Page</h1>
-    <p>Here you can find information about different types of pupuk.</p>
-    <p>Back to <a href="/">Home</a> or <a href="/bibit">Bibit Page</a></p>
+    <h1><%= title %></h1>
+
+    <form action="/pupuk" method="POST">
+        <input type="text" name="name" placeholder="Nama Pupuk" required><br>
+        <input type="text" name="type" placeholder="Tipe Pupuk" required><br>
+        <input type="text" name="category" placeholder="Kategori" required><br>
+        <input type="text" name="quality" placeholder="Kualitas" required><br>
+        <button type="submit">Tambah Pupuk</button>
+    </form>
+
+    <h2>Daftar Pupuk</h2>
+    <ul>
+        <% pupukList.forEach(pupuk => { %>
+            <li>
+                <%= pupuk.name %> - <%= pupuk.type %> - <%= pupuk.category %> - <%= pupuk.quality %>
+                <a href="/pupuk/delete/<%= pupuk.id %>">Hapus</a>
+            </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
