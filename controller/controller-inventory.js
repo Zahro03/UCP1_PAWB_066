@@ -52,7 +52,6 @@ const updateInventory = async (req, res) => {
             category,
             type,
             quantity,
-            extra_info,
         });
 
         if (!updated) {
