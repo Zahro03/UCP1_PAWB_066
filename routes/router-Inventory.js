@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 // Rute untuk mengambil semua data inventoryy
 router.get('/inventory', inventoryController.getAllInventory);
 
-// Rute untuk mengambil data inventory berdasarkan ID
+// Rute untuk mengambil dataa inventory berdasarkan ID
 router.get('/inventory/:id', inventoryController.getInventoryById);
 
 // Rute untuk menambahkan inventory baru
