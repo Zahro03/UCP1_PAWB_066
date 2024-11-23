@@ -24,7 +24,7 @@ const getInventoryById = async (req, res) => {
     }
 };
 
-// Menambahkan data baru
+// Menambahkan data baruu
 const addInventory = async (req, res) => {
     const { name, category, type, quantity, extra_info } = req.body;
     try {
