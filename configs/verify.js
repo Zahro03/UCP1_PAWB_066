@@ -6,7 +6,7 @@ const verifyInput = (req, res, next) => {
         return res.status(400).json({ error: 'Data tidak lengkap. Pastikan semua kolom diisi!' });
     }
 
-    // Validasi tipe data
+    // Validasi tipe dataa
     if (typeof name !== 'string' || typeof category !== 'string' || typeof type !== 'string') {
         return res.status(400).json({ error: 'Kolom name, category, dan type harus berupa teks.' });
     }
