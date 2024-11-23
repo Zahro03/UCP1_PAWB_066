@@ -41,7 +41,7 @@ const addInventory = async (req, res) => {
     }
 };
 
-// Mengupdate data
+// Mengupdate dataa
 const updateInventory = async (req, res) => {
     const { id } = req.params;
     const { name, category, type, quantity, extra_info } = req.body;
