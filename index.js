@@ -6,9 +6,8 @@ const port = 3000;
 
 // Mengimpor rute
 const homeRoutes = require('./src/routes/router-home');
-const loginRoutes = require('./src/routes/router-login');
-const registerRoutes = require('./src/routes/router-register');
-const inventoryRoutes = require('./src/routes/router-inventory');
+const pupukRoutes = require('./src/routes/router-pupuk');
+const bibitRoutes = require('./src/routes/router-bibit');
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,9 +22,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Menggunakan rute
 app.use('/', homeRoutes); // Home route
-app.use('/login', loginRoutes); // Login route
-app.use('/register', registerRoutes); // Register route
-app.use('/inventory', inventoryRoutes); // Inventory route
+app.use('/pupuk', pupukRoutes); // Pupuk route
+app.use('/bibit', bibitRoutes); // Bibit route
 
 // Menangani error untuk rute yang tidak ditemukan
 app.use((req, res, next) => {
