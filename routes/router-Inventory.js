@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     res.send('Selamat datang di halaman utama aplikasi Pertanian!');
 });
 
-// Rute untuk mengambil semua data inventory
+// Rute untuk mengambil semua data inventoryy
 router.get('/inventory', inventoryController.getAllInventory);
 
 // Rute untuk mengambil data inventory berdasarkan ID
