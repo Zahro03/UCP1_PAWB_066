@@ -1,24 +1,19 @@
-const mysql = require('mysql2');
+const mysql = require('mysql');
+require('dotenv').config();
 
-// Konfigurasi koneksi ke database MySQL
-const dbConfig = {
-    multipleStatements: true, // Mengizinkan multiple statements dalam query
-    host: 'localhost',        // Host database
-    user: 'Zahrooo',          // Username untuk koneksi ke database
-    password: '123',          // Password untuk koneksi
-    database: 'ucp1_paw'   // Nama database yang digunakan
-};
-
-// Membuat koneksi ke MySQL
-const connection = mysql.createConnection(dbConfig);
-
-// Menghubungkan ke database MySQL
-connection.connect((err) => {
-    if (err) {
-        console.error('Error connecting to the database:', err.stack);
-        return;
-    }
-    console.log('Connected to the MySQL database');
+const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 });
 
-module.exports = connection;
+connection.connect((error) => {
+    if (error) {
+        console.error("Error Connecting: " + error.stack);
+        return;
+    }
+    connection.log("Berhasil melakukan koneks")
+});
+
+module.exports= connection;
