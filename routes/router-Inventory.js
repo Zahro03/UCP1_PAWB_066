@@ -19,7 +19,7 @@ router.post('/inventory', inventoryController.addInventory);
 // Rute untuk mengupdate dataa inventory berdasarkan ID
 router.put('/inventory/:id', inventoryController.updateInventory);
 
-// Rute untuk menghapus data inventory berdasarkan ID
+// Rute untuk menghapus data inventoryY berdasarkan ID
 router.delete('/inventory/:id', inventoryController.deleteInventory);
 
 module.exports = router;
