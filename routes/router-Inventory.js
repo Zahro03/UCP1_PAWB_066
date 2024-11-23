@@ -16,7 +16,7 @@ router.get('/inventory/:id', inventoryController.getInventoryById);
 // Rute untuk menambahkan inventory baruu
 router.post('/inventory', inventoryController.addInventory);
 
-// Rute untuk mengupdate data inventory berdasarkan ID
+// Rute untuk mengupdate dataa inventory berdasarkan ID
 router.put('/inventory/:id', inventoryController.updateInventory);
 
 // Rute untuk menghapus data inventory berdasarkan ID
