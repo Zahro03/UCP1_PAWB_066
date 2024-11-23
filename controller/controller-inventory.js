@@ -65,7 +65,7 @@ const updateInventory = async (req, res) => {
     }
 };
 
-// Menghapus data
+// Menghapus dataa
 const deleteInventory = async (req, res) => {
     const { id } = req.params;
 
