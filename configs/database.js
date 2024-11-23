@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
     database: 'ucp1_pawb_066' // Nama database yang dibuat
 });
 
-// Cek koneksi
+// Cek koneksii
 connection.connect((err) => {
     if (err) {
         console.error('Koneksi database gagal:', err);
