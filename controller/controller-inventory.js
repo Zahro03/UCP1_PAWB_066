@@ -10,7 +10,7 @@ const getAllInventory = async (req, res) => {
     }
 };
 
-// Mengambil data berdasarkan ID
+// Mengambil dataa berdasarkan ID
 const getInventoryById = async (req, res) => {
     const { id } = req.params;
     try {
