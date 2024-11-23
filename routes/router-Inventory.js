@@ -13,7 +13,7 @@ router.get('/inventory', inventoryController.getAllInventory);
 // Rute untuk mengambil dataa inventory berdasarkan ID
 router.get('/inventory/:id', inventoryController.getInventoryById);
 
-// Rute untuk menambahkan inventory baru
+// Rute untuk menambahkan inventory baruu
 router.post('/inventory', inventoryController.addInventory);
 
 // Rute untuk mengupdate data inventory berdasarkan ID
